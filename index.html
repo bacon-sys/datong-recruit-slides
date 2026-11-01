@@ -335,6 +335,28 @@
   .orow .pm { font-size: 28px; padding: 6px 16px; }
   .orow b { font-family: 'Noto Serif TC', serif; font-size: 64px; margin-right: 22px; color: var(--ink); }
 
+
+  /* ── v6: 社團 ── */
+  .clubs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .club { background: var(--paper); border-radius: 22px; padding: 36px 26px 30px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border-top: 8px solid var(--cc); display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .cic { width: 116px; height: 116px; border-radius: 50%; background: var(--cc); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+  .cn { font-family: 'Noto Serif TC', serif; font-size: 36px; font-weight: 700; line-height: 1.25; }
+  .cs { font-size: 26px; color: var(--cc); font-weight: 700; margin: 4px 0 18px; }
+  .cd { font-size: 24px; line-height: 1.65; color: var(--ink-2); flex: 1; }
+  .cb { margin-top: 18px; font-size: 21px; font-weight: 700; color: var(--cc); background: var(--cp); padding: 8px 18px; border-radius: 30px; }
+  .club { justify-content: flex-start; padding-top: 48px; }
+  .cb { margin-top: auto !important; }
+  .cd { flex: none; font-size: 26px; }
+  .cic { width: 150px; height: 150px; margin-bottom: 28px; }
+  .cic svg { width: 84px; height: 84px; }
+  .cn { font-size: 40px; }
+  .cs { font-size: 28px; min-height: 40px; }
+  .cb { margin-top: 30px; font-size: 22px; }
+  .c-tr { --cc: #5f8fae; --cp: #e1eef6; }
+  .c-da { --cc: #b45f5f; --cp: #f6e3e1; }
+  .c-bb { --cc: #c08a3e; --cp: #f5eadb; }
+  .c-gt { --cc: #8d76b5; --cp: #efeaf6; }
+
   /* ── Ending ── */
   .ending { background: var(--forest); color: #fff; align-items: center; justify-content: center; text-align: center; }
   .ending::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(120,170,130,0.2) 0%, transparent 60%); }
@@ -549,6 +571,14 @@
       </div>
     </div>
     <div class="upd rv" style="--d:4;margin-top:10px">資料來源截至 115 年 3 月，共 15 筆；為保護學生隱私，不列姓名與部落。</div>
+  </section>
+
+  <!-- 10d 社團 -->
+  <section class="slide">
+    <div class="label rv" style="--d:0">社團活動</div>
+    <div class="title rv" style="--d:0">在大同，找到你的舞台</div>
+    <div class="rule rv" style="--d:0"></div>
+    <div class="body clubs"><div class="club c-tr rv" style="--d:1"><div class="cic"><svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="36" r="20" fill="none" stroke="#fff" stroke-width="5"/><rect x="27" y="6" width="10" height="7" rx="2" fill="#fff"/><path d="M32 36 L32 24" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M32 36 L41 41" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></div><div class="cn">體適能社</div><div class="cs">（田徑隊）</div><div class="cd">長跑、標槍、接力⋯⋯<br>一路跑上全國比賽</div><div class="cb">全國賽得獎常勝軍</div></div><div class="club c-da rv" style="--d:2"><div class="cic"><svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><path d="M32 6 L54 32 L32 58 L10 32 Z" fill="none" stroke="#fff" stroke-width="5"/><path d="M32 20 L44 32 L32 44 L20 32 Z" fill="#fff"/></svg></div><div class="cn">泰雅傳統舞蹈社</div><div class="cs">（舞蹈隊）</div><div class="cd">跳泰雅族傳統樂舞，<br>代表宜蘭縣參加全國賽</div><div class="cb">縣賽特優・全國優等</div></div><div class="club c-bb rv" style="--d:3"><div class="cic"><svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#fff" stroke-width="5"/><path d="M8 32 H56 M32 8 V56" stroke="#fff" stroke-width="4"/><path d="M15 15 Q27 32 15 49 M49 15 Q37 32 49 49" fill="none" stroke="#fff" stroke-width="4"/></svg></div><div class="cn">籃球社</div><div class="cs">&nbsp;</div><div class="cd">練球、學團隊合作，<br>組隊參加校外比賽</div><div class="cb">校外比賽實戰</div></div><div class="club c-gt rv" style="--d:4"><div class="cic"><svg viewBox="6 6 52 52" width="64" height="64" aria-hidden="true"><g transform="rotate(40 32 32)"><circle cx="32" cy="45" r="12" fill="#fff"/><circle cx="32" cy="31" r="9" fill="#fff"/><circle cx="32" cy="42" r="3.5" fill="var(--lilac)"/><rect x="29.5" y="4" width="5" height="26" fill="#fff"/><rect x="27" y="2" width="10" height="7" rx="2" fill="#fff"/></g></svg></div><div class="cn">吉他社</div><div class="cs">&nbsp;</div><div class="cd">學彈吉他，<br>和同學一起彈唱</div><div class="cb">音樂興趣</div></div></div>
   </section>
 
   <!-- 10c 競賽開場 -->
