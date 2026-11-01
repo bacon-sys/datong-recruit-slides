@@ -309,6 +309,32 @@
   .pf img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pf figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 16px 12px; font-size: 19px; line-height: 1.45; color: #fff; background: linear-gradient(transparent, rgba(20,30,25,0.78)); }
 
+
+  /* ── v5 ── */
+  .lm { display: flex; flex-direction: column; gap: 24px; }
+  .lm .panel { flex: 1; }
+  .lm .panel .desc { font-size: 30px; }
+  .lm .subjects { gap: 20px; }
+  .lm .subj { padding: 30px 8px 26px; }
+  .lm .subj b { font-size: 30px; }
+  .lm .subj span { font-size: 110px; }
+  .lm .subj small { font-size: 28px; }
+  .recap { display: flex; align-items: center; gap: 16px; background: var(--paper); border-radius: 18px; padding: 20px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); font-size: 24px; }
+  .recap b { font-family: 'Noto Serif TC', serif; font-size: 28px; margin-right: 8px; }
+  .recap .rc { color: #fff; padding: 8px 18px; border-radius: 10px; font-weight: 700; }
+  .recap i { font-style: normal; color: var(--ink-3); }
+  .op { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 28px; align-content: center; }
+  .opn { background: var(--paper); border-radius: 22px; padding: 30px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border-bottom: 6px solid var(--sage); }
+  .opn .ob b { font-family: 'Noto Serif TC', serif; font-size: 150px; line-height: 1; color: var(--forest-2); }
+  .opn .ob span { font-size: 40px; color: var(--sage); margin-left: 8px; }
+  .opn .ol { font-size: 32px; color: var(--ink-2); margin-top: 8px; }
+  .opn.gold { border-bottom-color: var(--gold); } .opn.gold .ob b, .opn.gold .ob span { color: var(--gold); }
+  .opm { grid-column: 1 / 3; background: var(--paper); border-radius: 22px; padding: 26px 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: center; gap: 40px; }
+  .ot { font-family: 'Noto Serif TC', serif; font-size: 34px; font-weight: 700; }
+  .orow { display: flex; align-items: center; gap: 14px; }
+  .orow .pm { font-size: 28px; padding: 6px 16px; }
+  .orow b { font-family: 'Noto Serif TC', serif; font-size: 64px; margin-right: 22px; color: var(--ink); }
+
   /* ── Ending ── */
   .ending { background: var(--forest); color: #fff; align-items: center; justify-content: center; text-align: center; }
   .ending::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(120,170,130,0.2) 0%, transparent 60%); }
@@ -393,8 +419,7 @@
     </div>
     <div class="answer rv" style="--d:2">
       <div class="k">真相</div>
-      <div class="big">雙軌並行，學科一節都沒少</div>
-      <p>學科節數與一般學校相同，英語甚至多一節；<br>文化課程各年級各有主題，紮實不打折。</p>
+      <div class="big" style="margin-bottom:0">雙軌並行，學科一節都沒少</div>
     </div>
     </div>
   </section>
@@ -404,10 +429,10 @@
     <div class="label rv" style="--d:0">學習模式</div>
     <div class="title rv" style="--d:0">雙軌制學習：學力與文化並行</div>
     <div class="rule rv" style="--d:0"></div>
-    <div class="body dual">
+    <div class="body lm">
       <div class="panel rv" style="--d:1">
         <h3><span class="dot"></span>基本學科正常學習</h3>
-        <div class="desc">每週節數與一般學校相同，<br>英語甚至多一節。</div>
+        <div class="desc">每週節數和一般學校相同，英語甚至多一節。</div>
         <div class="subjects">
           <div class="subj"><b>國文</b><span>4</span><small>節</small></div>
           <div class="subj hl"><b>英語</b><span>4</span><small>節</small></div>
@@ -416,14 +441,9 @@
           <div class="subj"><b>自然</b><span>3</span><small>節</small></div>
         </div>
       </div>
-      <div class="panel rv" style="--d:2">
-        <h3><span class="dot" style="background:var(--earth)"></span>文化領域學習紮實</h3>
-        <div class="desc">三個年級各有學習主題，<br>完整涵蓋泰雅族知識體系。</div>
-        <div class="years">
-          <div class="year y7"><div class="g">七年級</div><div class="t">燒墾生活</div><div class="n">計 345 節</div></div>
-          <div class="year y8"><div class="g">八年級</div><div class="t">gaga家庭<br>與編織</div><div class="n">計 345 節</div></div>
-          <div class="year y9"><div class="g">九年級</div><div class="t">山林智慧</div><div class="n">計 315 節</div></div>
-        </div>
+      <div class="recap rv" style="--d:2">
+        <b>文化課程</b>
+        <span class="rc y7">七年級・燒墾生活</span><i>→</i><span class="rc y8">八年級・gaga 家庭與編織</span><i>→</i><span class="rc y9">九年級・山林智慧</span>
       </div>
     </div>
   </section>
@@ -529,6 +549,26 @@
       </div>
     </div>
     <div class="upd rv" style="--d:4;margin-top:10px">資料來源截至 115 年 3 月，共 15 筆；為保護學生隱私，不列姓名與部落。</div>
+  </section>
+
+  <!-- 10c 競賽開場 -->
+  <section class="slide">
+    <div class="label rv" style="--d:0">學生表現</div>
+    <div class="title rv" style="--d:0">勇於挑戰，站上全國舞台</div>
+    <div class="rule rv" style="--d:0"></div>
+    <div class="body op">
+      <div class="opn rv" style="--d:1">
+        <div class="ob"><b>67</b><span>次</span></div><div class="ol">四年來的得獎紀錄</div>
+      </div>
+      <div class="opn gold rv" style="--d:2">
+        <div class="ob"><b>37</b><span>次</span></div><div class="ol">在全國比賽得獎</div>
+      </div>
+      <div class="opm rv" style="--d:3">
+        <div class="ot">全國體育比賽</div>
+        <div class="orow"><span class="pm m-gold">第一名</span><b>6</b><span class="pm m-silver">第二名</span><b>13</b><span class="pm m-bronze">第三名</span><b>10</b></div>
+      </div>
+    </div>
+    <div class="upd rv" style="--d:4">112～115 學年度統計</div>
   </section>
 
   <!-- 11 民族文化競賽 -->
