@@ -358,6 +358,15 @@
   .c-bb { --cc: #c08a3e; --cp: #f5eadb; }
   .c-gt { --cc: #8d76b5; --cp: #efeaf6; }
 
+
+  /* ── v7: 理想國中 ── */
+  .dream { background: linear-gradient(160deg, #f7f3ec 0%, #e8f0e9 100%); }
+  .wishes { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 24px; }
+  .wish { background: var(--paper); border-radius: 22px; box-shadow: 0 4px 22px rgba(0,0,0,0.06); border-left: 8px solid var(--wc); display: flex; align-items: center; gap: 24px; padding: 24px 30px; }
+  .wn { flex: none; width: 64px; height: 64px; border-radius: 50%; background: var(--wc); color: #fff; font-family: 'Noto Serif TC', serif; font-size: 34px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .wt { font-family: 'Noto Serif TC', serif; font-size: 36px; font-weight: 700; line-height: 1.35; color: var(--ink); }
+  .dq { margin-top: 26px; font-size: 30px; color: var(--forest-2); font-weight: 700; text-align: center; }
+
   /* ── Ending ── */
   .ending { background: var(--forest); color: #fff; align-items: center; justify-content: center; text-align: center; }
   .ending::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(120,170,130,0.2) 0%, transparent 60%); }
@@ -392,6 +401,15 @@
     <div class="tags rv" style="--d:4">
       <span class="tag">文化傳承</span><span class="tag">雙軌學習</span><span class="tag">國際接軌</span><span class="tag">競賽亮眼</span>
     </div>
+  </section>
+
+  <!-- 1b 理想國中 -->
+  <section class="slide dream">
+    <div class="label rv" style="--d:0">想一想</div>
+    <div class="title rv" style="--d:0">你心中理想的國中，是什麼樣子？</div>
+    <div class="rule rv" style="--d:0"></div>
+    <div class="body wishes"><div class="wish rv" style="--d:1;--wc:var(--sage)"><span class="wn">1</span><span class="wt">一群一起努力的<br>好朋友</span></div><div class="wish rv" style="--d:2;--wc:var(--sky)"><span class="wn">2</span><span class="wt">老師認識我、<br>陪著我</span></div><div class="wish rv" style="--d:3;--wc:var(--earth)"><span class="wn">3</span><span class="wt">能發揮我的專長</span></div><div class="wish rv" style="--d:4;--wc:var(--y8)"><span class="wn">4</span><span class="wt">學到課本以外的<br>真本事</span></div><div class="wish rv" style="--d:5;--wc:var(--gold)"><span class="wn">5</span><span class="wt">認識自己<br>從哪裡來</span></div><div class="wish rv" style="--d:6;--wc:var(--lilac)"><span class="wn">6</span><span class="wt">有機會看見<br>外面的世界</span></div></div>
+    <div class="dq rv" style="--d:7">選一個你最想要的，等一下看看在大同找不找得到。</div>
   </section>
 
   <!-- 2 學校理念 -->
