@@ -415,6 +415,17 @@
   .curr-t { font-family: 'Noto Serif TC', serif; font-size: 40px; font-weight: 700; color: var(--ink); }
   .curr .imgcard { padding: 8px; }
 
+
+  /* ── v11: 迷思一＋學習模式合併 ── */
+  .m1a { padding: 28px 40px 30px; }
+  .m1top { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 22px; }
+  .m1d { font-size: 26px; line-height: 1.6; color: var(--ink-2); text-align: right; }
+  .m1s { gap: 18px; margin-top: 0; }
+  .m1s .subj { padding: 20px 8px 16px; }
+  .m1s .subj b { font-size: 26px; }
+  .m1s .subj span { font-size: 84px; }
+  .m1s .subj small { font-size: 24px; }
+
   /* ── Ending ── */
   .ending { background: var(--forest); color: #fff; align-items: center; justify-content: center; text-align: center; }
   .ending::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(120,170,130,0.2) 0%, transparent 60%); }
@@ -513,43 +524,30 @@
     </div>
   </section>
 
-  <!-- 6 迷思一 -->
-  <section class="slide">
+  <!-- 6 迷思一（含學習模式） -->
+  <section class="slide m1">
     <div class="label rv" style="--d:0">破解迷思</div>
-    <div class="rule rv" style="--d:0;margin-top:8px"></div>
-    <div class="mythbody">
-    <div class="myth-head rv" style="--d:1">
+    <div class="rule rv" style="--d:0;margin-top:8px;margin-bottom:22px"></div>
+    <div class="myth-head rv" style="--d:1;margin-bottom:22px">
       <div class="num n1">1</div>
       <div><div class="k">迷思一</div><div class="q" style="white-space:nowrap">「實驗教育都在學文化，都沒有在上課？」</div></div>
     </div>
-    <div class="answer rv" style="--d:2">
-      <div class="k">真相</div>
-      <div class="big" style="margin-bottom:0">雙軌並行，學科一節都沒少</div>
-    </div>
-    </div>
-  </section>
-
-  <!-- 4 雙軌制 -->
-  <section class="slide">
-    <div class="label rv" style="--d:0">學習模式</div>
-    <div class="title rv" style="--d:0">雙軌制學習：學力與文化並行</div>
-    <div class="rule rv" style="--d:0"></div>
-    <div class="body lm">
-      <div class="panel rv" style="--d:1">
-        <h3><span class="dot"></span>基本學科正常學習</h3>
-        <div class="desc">每週節數和一般學校相同，英語甚至多一節。</div>
-        <div class="subjects">
-          <div class="subj"><b>國文</b><span>4</span><small>節</small></div>
-          <div class="subj hl"><b>英語</b><span>4</span><small>節</small></div>
-          <div class="subj"><b>數學</b><span>4</span><small>節</small></div>
-          <div class="subj"><b>社會</b><span>3</span><small>節</small></div>
-          <div class="subj"><b>自然</b><span>3</span><small>節</small></div>
-        </div>
+    <div class="answer m1a rv" style="--d:2">
+      <div class="m1top">
+        <div><div class="k">真相</div><div class="big" style="margin-bottom:0">雙軌並行，學科一節都沒少</div></div>
+        <div class="m1d">每週節數和一般學校相同，<br>英語甚至多一節。</div>
       </div>
-      <div class="recap rv" style="--d:2">
-        <b>文化課程</b>
-        <span class="rc y7">七年級・燒墾生活</span><i>→</i><span class="rc y8">八年級・gaga 家庭與編織</span><i>→</i><span class="rc y9">九年級・山林智慧</span>
+      <div class="subjects m1s">
+        <div class="subj"><b>國文</b><span>4</span><small>節</small></div>
+        <div class="subj hl"><b>英語</b><span>4</span><small>節</small></div>
+        <div class="subj"><b>數學</b><span>4</span><small>節</small></div>
+        <div class="subj"><b>社會</b><span>3</span><small>節</small></div>
+        <div class="subj"><b>自然</b><span>3</span><small>節</small></div>
       </div>
+    </div>
+    <div class="recap rv" style="--d:3;margin-top:20px">
+      <b>文化課程</b>
+      <span class="rc y7">七年級・燒墾生活</span><i>→</i><span class="rc y8">八年級・gaga 家庭與編織</span><i>→</i><span class="rc y9">九年級・山林智慧</span>
     </div>
   </section>
 
