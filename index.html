@@ -380,6 +380,33 @@
   .m4t b { color: var(--ink); }
   .m4q { margin-top: 18px; font-size: 30px; font-weight: 700; color: var(--forest-2); text-align: center; }
 
+
+  /* ── v9: 一週課表、結尾聯絡 ── */
+  .week { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  table.tt { width: 100%; border-collapse: separate; border-spacing: 5px; font-size: 24px; table-layout: fixed; }
+  table.tt tr.hd th:first-child { width: 74px; }
+  table.tt th { font-size: 19px; font-weight: 500; color: var(--ink-3); text-align: right; padding-right: 8px; width: 74px; font-variant-numeric: tabular-nums; }
+  table.tt tr.hd th { text-align: center; font-size: 22px; font-weight: 700; color: var(--forest-2); padding: 4px 0; width: auto; }
+  table.tt td { text-align: center; border-radius: 10px; height: 54px; color: var(--ink); }
+  table.tt tr.band td { height: 32px; font-size: 19px; color: var(--ink-3); background: rgba(0,0,0,0.035); letter-spacing: 3px; }
+  table.tt td.s { background: var(--sage-pale); }
+  table.tt td.o { background: #eeebe5; color: var(--ink-2); }
+  table.tt td.l { background: #f1dfcf; color: #84592f; font-weight: 700; }
+  table.tt td.c { background: var(--earth); color: #fff; font-size: 30px; letter-spacing: 2px; }
+  table.tt td.k { background: var(--lilac); color: #fff; font-size: 26px; }
+  .wk-side { display: flex; flex-direction: column; gap: 14px; padding-top: 52px; }
+  .wk-l { display: flex; align-items: center; gap: 12px; font-size: 22px; color: var(--ink-2); }
+  .wk-l i { width: 26px; height: 26px; border-radius: 7px; }
+  .wk-l i.s { background: var(--sage-pale); border: 1px solid #c9dccc; } .wk-l i.c { background: var(--earth); }
+  .wk-l i.l { background: #f1dfcf; } .wk-l i.k { background: var(--lilac); } .wk-l i.o { background: #eeebe5; border: 1px solid #ddd8cf; }
+  .wk-note { margin-top: 18px; padding: 20px 22px; background: var(--paper); border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.06); font-family: 'Noto Serif TC', serif; font-size: 26px; font-weight: 700; line-height: 1.6; color: var(--forest-2); }
+  .wk-src { font-size: 18px; color: var(--ink-3); }
+  .ending .contact { margin-top: 44px; display: flex; align-items: center; gap: 28px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 18px 30px 18px 18px; }
+  .ending .contact img { width: 128px; height: 128px; background: #fff; border-radius: 10px; padding: 6px; }
+  .ending .ct { display: flex; flex-direction: column; text-align: left; gap: 6px; }
+  .ending .ct b { font-size: 30px; color: #e3f0da; }
+  .ending .ct span { font-size: 22px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
   /* ── Ending ── */
   .ending { background: var(--forest); color: #fff; align-items: center; justify-content: center; text-align: center; }
   .ending::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(120,170,130,0.2) 0%, transparent 60%); }
@@ -447,6 +474,25 @@
         <p>走進大同國中，<br>看見孩子在山林、<br>部落與教室裡的學習。</p>
         <a class="yt-link" href="https://www.youtube.com/watch?v=Z_sTZxB_uIo" target="_blank" rel="noopener">▶ 在 YouTube 觀看</a>
         <div class="file-note">影片會在新分頁播放，<br>看完關閉分頁即可回到簡報。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b 一週 -->
+  <section class="slide">
+    <div class="label rv" style="--d:0">校園生活</div>
+    <div class="title rv" style="--d:0">在大同的一週</div>
+    <div class="rule rv" style="--d:0"></div>
+    <div class="body week">
+      <div class="rv" style="--d:1"><table class='tt'><tr class='hd'><th></th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th></tr><tr class='band'><th>08:00</th><td colspan='5'>早自習・晨光悅讀</td></tr><tr><th>08:25</th><td class='s'>英語</td><td class='s'>國文</td><td class='s'>數學</td><td class='o'>健體</td><td class='o'>科技</td></tr><tr><th>09:20</th><td class='s'>歷史</td><td class='s'>自然</td><td class='s'>公民</td><td class='s'>數學</td><td class='s'>英語</td></tr><tr><th>10:15</th><td class='s'>數學</td><td class='o'>藝術</td><td class='s'>英語</td><td class='s'>國文</td><td class='s'>自然</td></tr><tr><th>11:10</th><td class='s'>國文</td><td class='s'>數學</td><td class='s'>國文</td><td class='s'>英語</td><td class='l'>族語</td></tr><tr class='band'><th>11:55</th><td colspan='5'>午餐・午休</td></tr><tr><th>13:10</th><td class='s'>地理</td><td class='o'>班／週會</td><td class='c' rowspan='3'><b>泰雅文化</b></td><td class='c' rowspan='3'><b>泰雅文化</b></td><td class='c' rowspan='3'><b>泰雅文化</b></td></tr><tr><th>14:05</th><td class='s'>自然</td><td class='k' rowspan='2'><b>社團活動</b></td></tr><tr><th>15:00</th><td class='o'>綜合</td></tr><tr class='band'><th>15:45</th><td colspan='5'>導師時間</td></tr></table></div>
+      <div class="wk-side rv" style="--d:2">
+        <div class="wk-l"><i class="s"></i>國英數自社</div>
+        <div class="wk-l"><i class="c"></i>泰雅文化</div>
+        <div class="wk-l"><i class="l"></i>族語</div>
+        <div class="wk-l"><i class="k"></i>社團活動</div>
+        <div class="wk-l"><i class="o"></i>藝能、綜合</div>
+        <div class="wk-note">上午認真學學科，<br>週三到週五下午，<br>走進泰雅文化。</div>
+        <div class="wk-src">115 學年度第一學期・七年級課表</div>
       </div>
     </div>
   </section>
@@ -548,11 +594,11 @@
     </div>
     <div class="answer rv" style="--d:2">
       <div class="k">真相</div>
-      <div class="big">學科不退反進，升學更有優勢</div>
-      <p>實驗教育期間，會考五科「待加強」比例由 70.8% 降至 62.3%；<br>115 年為 50.0%，是十二年來最低。</p>
+      <div class="big">文化、學科並行，升學路很多元</div>
+      <p>推動實驗教育以來，會考五科「待加強」比例由 70.8% 降至 62.3%；<br>115 年為 50.0%，是十二年來最低。</p>
     </div>
     <div class="stats rv" style="--d:3">
-      <div class="stat"><div class="v">▼8.5<small>個百分點</small></div><div class="l">會考五科待加強比例下降</div></div>
+      <div class="stat"><div class="v">▼8.5<small>個百分點</small></div><div class="l">實驗教育前後，會考待加強比例<br>70.8% → 62.3%</div></div>
       <div class="stat"><div class="v">58<small>/ 61 位</small></div><div class="l">111–114 學年度畢業生升學</div></div>
       <div class="stat gold"><div class="v">95.1<small>%</small></div><div class="l">近四年升學率（111、112 學年度 100%）</div></div>
     </div>
@@ -686,6 +732,10 @@
     <div class="s rv" style="--d:1">TAYAL BALAY・迎向未來</div>
     <div class="line rv" style="--d:2"></div>
     <div class="n rv" style="--d:2">宜蘭縣立大同國中・原住民族實驗教育學校</div>
+    <div class="contact rv" style="--d:3">
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPHN2ZyB3aWR0aD0iMzNtbSIgaGVpZ2h0PSIzM21tIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMyAzMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMiwySDNWM0gyek0zLDJINFYzSDN6TTQsMkg1VjNINHpNNSwySDZWM0g1ek02LDJIN1YzSDZ6TTcsMkg4VjNIN3pNOCwySDlWM0g4ek0xMCwySDExVjNIMTB6TTEyLDJIMTNWM0gxMnpNMTMsMkgxNFYzSDEzek0xNCwySDE1VjNIMTR6TTE3LDJIMThWM0gxN3pNMTgsMkgxOVYzSDE4ek0xOSwySDIwVjNIMTl6TTIwLDJIMjFWM0gyMHpNMjQsMkgyNVYzSDI0ek0yNSwySDI2VjNIMjV6TTI2LDJIMjdWM0gyNnpNMjcsMkgyOFYzSDI3ek0yOCwySDI5VjNIMjh6TTI5LDJIMzBWM0gyOXpNMzAsMkgzMVYzSDMwek0yLDNIM1Y0SDJ6TTgsM0g5VjRIOHpNMTAsM0gxMVY0SDEwek0xMSwzSDEyVjRIMTF6TTEyLDNIMTNWNEgxMnpNMTMsM0gxNFY0SDEzek0xNCwzSDE1VjRIMTR6TTE4LDNIMTlWNEgxOHpNMjEsM0gyMlY0SDIxek0yNCwzSDI1VjRIMjR6TTMwLDNIMzFWNEgzMHpNMiw0SDNWNUgyek00LDRINVY1SDR6TTUsNEg2VjVINXpNNiw0SDdWNUg2ek04LDRIOVY1SDh6TTEwLDRIMTFWNUgxMHpNMTEsNEgxMlY1SDExek0xMyw0SDE0VjVIMTN6TTE0LDRIMTVWNUgxNHpNMTcsNEgxOFY1SDE3ek0xOCw0SDE5VjVIMTh6TTIwLDRIMjFWNUgyMHpNMjEsNEgyMlY1SDIxek0yMiw0SDIzVjVIMjJ6TTI0LDRIMjVWNUgyNHpNMjYsNEgyN1Y1SDI2ek0yNyw0SDI4VjVIMjd6TTI4LDRIMjlWNUgyOHpNMzAsNEgzMVY1SDMwek0yLDVIM1Y2SDJ6TTQsNUg1VjZINHpNNSw1SDZWNkg1ek02LDVIN1Y2SDZ6TTgsNUg5VjZIOHpNMTEsNUgxMlY2SDExek0xMyw1SDE0VjZIMTN6TTE4LDVIMTlWNkgxOHpNMTksNUgyMFY2SDE5ek0yMiw1SDIzVjZIMjJ6TTI0LDVIMjVWNkgyNHpNMjYsNUgyN1Y2SDI2ek0yNyw1SDI4VjZIMjd6TTI4LDVIMjlWNkgyOHpNMzAsNUgzMVY2SDMwek0yLDZIM1Y3SDJ6TTQsNkg1VjdINHpNNSw2SDZWN0g1ek02LDZIN1Y3SDZ6TTgsNkg5VjdIOHpNMTAsNkgxMVY3SDEwek0xMiw2SDEzVjdIMTJ6TTE2LDZIMTdWN0gxNnpNMTcsNkgxOFY3SDE3ek0xOCw2SDE5VjdIMTh6TTE5LDZIMjBWN0gxOXpNMjEsNkgyMlY3SDIxek0yNCw2SDI1VjdIMjR6TTI2LDZIMjdWN0gyNnpNMjcsNkgyOFY3SDI3ek0yOCw2SDI5VjdIMjh6TTMwLDZIMzFWN0gzMHpNMiw3SDNWOEgyek04LDdIOVY4SDh6TTExLDdIMTJWOEgxMXpNMTIsN0gxM1Y4SDEyek0xMyw3SDE0VjhIMTN6TTE0LDdIMTVWOEgxNHpNMTcsN0gxOFY4SDE3ek0xOCw3SDE5VjhIMTh6TTE5LDdIMjBWOEgxOXpNMjQsN0gyNVY4SDI0ek0zMCw3SDMxVjhIMzB6TTIsOEgzVjlIMnpNMyw4SDRWOUgzek00LDhINVY5SDR6TTUsOEg2VjlINXpNNiw4SDdWOUg2ek03LDhIOFY5SDd6TTgsOEg5VjlIOHpNMTAsOEgxMVY5SDEwek0xMiw4SDEzVjlIMTJ6TTE0LDhIMTVWOUgxNHpNMTYsOEgxN1Y5SDE2ek0xOCw4SDE5VjlIMTh6TTIwLDhIMjFWOUgyMHpNMjIsOEgyM1Y5SDIyek0yNCw4SDI1VjlIMjR6TTI1LDhIMjZWOUgyNXpNMjYsOEgyN1Y5SDI2ek0yNyw4SDI4VjlIMjd6TTI4LDhIMjlWOUgyOHpNMjksOEgzMFY5SDI5ek0zMCw4SDMxVjlIMzB6TTEzLDlIMTRWMTBIMTN6TTE1LDlIMTZWMTBIMTV6TTE3LDlIMThWMTBIMTd6TTE4LDlIMTlWMTBIMTh6TTIsMTBIM1YxMUgyek01LDEwSDZWMTFINXpNNiwxMEg3VjExSDZ6TTcsMTBIOFYxMUg3ek04LDEwSDlWMTFIOHpNOSwxMEgxMFYxMUg5ek0xMCwxMEgxMVYxMUgxMHpNMTEsMTBIMTJWMTFIMTF6TTEzLDEwSDE0VjExSDEzek0xNCwxMEgxNVYxMUgxNHpNMTUsMTBIMTZWMTFIMTV6TTE5LDEwSDIwVjExSDE5ek0yMCwxMEgyMVYxMUgyMHpNMjMsMTBIMjRWMTFIMjN6TTI2LDEwSDI3VjExSDI2ek0yOCwxMEgyOVYxMUgyOHpNMjksMTBIMzBWMTFIMjl6TTMwLDEwSDMxVjExSDMwek0yLDExSDNWMTJIMnpNNCwxMUg1VjEySDR6TTUsMTFINlYxMkg1ek02LDExSDdWMTJINnpNMTMsMTFIMTRWMTJIMTN6TTE1LDExSDE2VjEySDE1ek0xOCwxMUgxOVYxMkgxOHpNMTksMTFIMjBWMTJIMTl6TTIwLDExSDIxVjEySDIwek0yMSwxMUgyMlYxMkgyMXpNMjIsMTFIMjNWMTJIMjJ6TTI1LDExSDI2VjEySDI1ek0yNiwxMUgyN1YxMkgyNnpNMjgsMTFIMjlWMTJIMjh6TTI5LDExSDMwVjEySDI5ek0yLDEySDNWMTNIMnpNNiwxMkg3VjEzSDZ6TTgsMTJIOVYxM0g4ek05LDEySDEwVjEzSDl6TTExLDEySDEyVjEzSDExek0xNCwxMkgxNVYxM0gxNHpNMTUsMTJIMTZWMTNIMTV6TTE3LDEySDE4VjEzSDE3ek0xOCwxMkgxOVYxM0gxOHpNMjUsMTJIMjZWMTNIMjV6TTI4LDEySDI5VjEzSDI4ek0yLDEzSDNWMTRIMnpNMywxM0g0VjE0SDN6TTUsMTNINlYxNEg1ek03LDEzSDhWMTRIN3pNOSwxM0gxMFYxNEg5ek0xMiwxM0gxM1YxNEgxMnpNMTUsMTNIMTZWMTRIMTV6TTE4LDEzSDE5VjE0SDE4ek0xOSwxM0gyMFYxNEgxOXpNMjAsMTNIMjFWMTRIMjB6TTIxLDEzSDIyVjE0SDIxek0yNCwxM0gyNVYxNEgyNHpNMjcsMTNIMjhWMTRIMjd6TTMwLDEzSDMxVjE0SDMwek01LDE0SDZWMTVINXpNNiwxNEg3VjE1SDZ6TTcsMTRIOFYxNUg3ek04LDE0SDlWMTVIOHpNOSwxNEgxMFYxNUg5ek0xMywxNEgxNFYxNUgxM3pNMTUsMTRIMTZWMTVIMTV6TTE3LDE0SDE4VjE1SDE3ek0xOCwxNEgxOVYxNUgxOHpNMjEsMTRIMjJWMTVIMjF6TTIyLDE0SDIzVjE1SDIyek0yNCwxNEgyNVYxNUgyNHpNMjUsMTRIMjZWMTVIMjV6TTMwLDE0SDMxVjE1SDMwek0yLDE1SDNWMTZIMnpNNSwxNUg2VjE2SDV6TTcsMTVIOFYxNkg3ek05LDE1SDEwVjE2SDl6TTEwLDE1SDExVjE2SDEwek0xMywxNUgxNFYxNkgxM3pNMTUsMTVIMTZWMTZIMTV6TTE2LDE1SDE3VjE2SDE2ek0xOCwxNUgxOVYxNkgxOHpNMjMsMTVIMjRWMTZIMjN6TTI0LDE1SDI1VjE2SDI0ek0yNiwxNUgyN1YxNkgyNnpNMjcsMTVIMjhWMTZIMjd6TTI4LDE1SDI5VjE2SDI4ek0yOSwxNUgzMFYxNkgyOXpNMzAsMTVIMzFWMTZIMzB6TTcsMTZIOFYxN0g3ek04LDE2SDlWMTdIOHpNMTAsMTZIMTFWMTdIMTB6TTExLDE2SDEyVjE3SDExek0xMiwxNkgxM1YxN0gxMnpNMTMsMTZIMTRWMTdIMTN6TTE0LDE2SDE1VjE3SDE0ek0xNSwxNkgxNlYxN0gxNXpNMTgsMTZIMTlWMTdIMTh6TTIxLDE2SDIyVjE3SDIxek0yNCwxNkgyNVYxN0gyNHpNMjUsMTZIMjZWMTdIMjV6TTI4LDE2SDI5VjE3SDI4ek0zMCwxNkgzMVYxN0gzMHpNMywxN0g0VjE4SDN6TTQsMTdINVYxOEg0ek0xMCwxN0gxMVYxOEgxMHpNMTIsMTdIMTNWMThIMTJ6TTE0LDE3SDE1VjE4SDE0ek0xNywxN0gxOFYxOEgxN3pNMjAsMTdIMjFWMThIMjB6TTI0LDE3SDI1VjE4SDI0ek0yNSwxN0gyNlYxOEgyNXpNMjYsMTdIMjdWMThIMjZ6TTI4LDE3SDI5VjE4SDI4ek0zMCwxN0gzMVYxOEgzMHpNMiwxOEgzVjE5SDJ6TTQsMThINVYxOUg0ek04LDE4SDlWMTlIOHpNOSwxOEgxMFYxOUg5ek0xMSwxOEgxMlYxOUgxMXpNMTMsMThIMTRWMTlIMTN6TTE0LDE4SDE1VjE5SDE0ek0xNiwxOEgxN1YxOUgxNnpNMTgsMThIMTlWMTlIMTh6TTIxLDE4SDIyVjE5SDIxek0yMiwxOEgyM1YxOUgyMnpNMjcsMThIMjhWMTlIMjd6TTIsMTlIM1YyMEgyek0zLDE5SDRWMjBIM3pNNCwxOUg1VjIwSDR6TTcsMTlIOFYyMEg3ek05LDE5SDEwVjIwSDl6TTExLDE5SDEyVjIwSDExek0xMiwxOUgxM1YyMEgxMnpNMTMsMTlIMTRWMjBIMTN6TTE0LDE5SDE1VjIwSDE0ek0xNSwxOUgxNlYyMEgxNXpNMTYsMTlIMTdWMjBIMTZ6TTE4LDE5SDE5VjIwSDE4ek0xOSwxOUgyMFYyMEgxOXpNMjEsMTlIMjJWMjBIMjF6TTIyLDE5SDIzVjIwSDIyek0yNiwxOUgyN1YyMEgyNnpNMjgsMTlIMjlWMjBIMjh6TTI5LDE5SDMwVjIwSDI5ek0yLDIwSDNWMjFIMnpNMywyMEg0VjIxSDN6TTYsMjBIN1YyMUg2ek03LDIwSDhWMjFIN3pNOCwyMEg5VjIxSDh6TTEwLDIwSDExVjIxSDEwek0xMiwyMEgxM1YyMUgxMnpNMTQsMjBIMTVWMjFIMTR6TTE3LDIwSDE4VjIxSDE3ek0yMSwyMEgyMlYyMUgyMXpNMjMsMjBIMjRWMjFIMjN6TTI3LDIwSDI4VjIxSDI3ek0zMCwyMEgzMVYyMUgzMHpNMiwyMUgzVjIySDJ6TTMsMjFINFYyMkgzek00LDIxSDVWMjJINHpNNSwyMUg2VjIySDV6TTksMjFIMTBWMjJIOXpNMTAsMjFIMTFWMjJIMTB6TTExLDIxSDEyVjIySDExek0xMiwyMUgxM1YyMkgxMnpNMTQsMjFIMTVWMjJIMTR6TTE2LDIxSDE3VjIySDE2ek0yMSwyMUgyMlYyMkgyMXpNMjIsMjFIMjNWMjJIMjJ6TTI0LDIxSDI1VjIySDI0ek0yNSwyMUgyNlYyMkgyNXpNMjYsMjFIMjdWMjJIMjZ6TTI3LDIxSDI4VjIySDI3ek0yOCwyMUgyOVYyMkgyOHpNMiwyMkgzVjIzSDJ6TTMsMjJINFYyM0gzek00LDIySDVWMjNINHpNNiwyMkg3VjIzSDZ6TTgsMjJIOVYyM0g4ek0xMCwyMkgxMVYyM0gxMHpNMTIsMjJIMTNWMjNIMTJ6TTE0LDIySDE1VjIzSDE0ek0xNSwyMkgxNlYyM0gxNXpNMTYsMjJIMTdWMjNIMTZ6TTE3LDIySDE4VjIzSDE3ek0xOCwyMkgxOVYyM0gxOHpNMTksMjJIMjBWMjNIMTl6TTIwLDIySDIxVjIzSDIwek0yMiwyMkgyM1YyM0gyMnpNMjMsMjJIMjRWMjNIMjN6TTI0LDIySDI1VjIzSDI0ek0yNSwyMkgyNlYyM0gyNXpNMjYsMjJIMjdWMjNIMjZ6TTI3LDIySDI4VjIzSDI3ek0yOCwyMkgyOVYyM0gyOHpNMjksMjJIMzBWMjNIMjl6TTEwLDIzSDExVjI0SDEwek0xMiwyM0gxM1YyNEgxMnpNMTMsMjNIMTRWMjRIMTN6TTE0LDIzSDE1VjI0SDE0ek0xNiwyM0gxN1YyNEgxNnpNMTksMjNIMjBWMjRIMTl6TTIwLDIzSDIxVjI0SDIwek0yMiwyM0gyM1YyNEgyMnpNMjYsMjNIMjdWMjRIMjZ6TTI3LDIzSDI4VjI0SDI3ek0yLDI0SDNWMjVIMnpNMywyNEg0VjI1SDN6TTQsMjRINVYyNUg0ek01LDI0SDZWMjVINXpNNiwyNEg3VjI1SDZ6TTcsMjRIOFYyNUg3ek04LDI0SDlWMjVIOHpNMTAsMjRIMTFWMjVIMTB6TTEyLDI0SDEzVjI1SDEyek0xNCwyNEgxNVYyNUgxNHpNMTYsMjRIMTdWMjVIMTZ6TTIxLDI0SDIyVjI1SDIxek0yMiwyNEgyM1YyNUgyMnpNMjQsMjRIMjVWMjVIMjR6TTI2LDI0SDI3VjI1SDI2ek0yNywyNEgyOFYyNUgyN3pNMiwyNUgzVjI2SDJ6TTgsMjVIOVYyNkg4ek0xMCwyNUgxMVYyNkgxMHpNMTMsMjVIMTRWMjZIMTN6TTE0LDI1SDE1VjI2SDE0ek0xNiwyNUgxN1YyNkgxNnpNMTcsMjVIMThWMjZIMTd6TTE5LDI1SDIwVjI2SDE5ek0yMSwyNUgyMlYyNkgyMXpNMjIsMjVIMjNWMjZIMjJ6TTI2LDI1SDI3VjI2SDI2ek0zMCwyNUgzMVYyNkgzMHpNMiwyNkgzVjI3SDJ6TTQsMjZINVYyN0g0ek01LDI2SDZWMjdINXpNNiwyNkg3VjI3SDZ6TTgsMjZIOVYyN0g4ek0xMCwyNkgxMVYyN0gxMHpNMTIsMjZIMTNWMjdIMTJ6TTEzLDI2SDE0VjI3SDEzek0xNCwyNkgxNVYyN0gxNHpNMTUsMjZIMTZWMjdIMTV6TTE2LDI2SDE3VjI3SDE2ek0xOSwyNkgyMFYyN0gxOXpNMjAsMjZIMjFWMjdIMjB6TTIxLDI2SDIyVjI3SDIxek0yMiwyNkgyM1YyN0gyMnpNMjMsMjZIMjRWMjdIMjN6TTI0LDI2SDI1VjI3SDI0ek0yNSwyNkgyNlYyN0gyNXpNMjYsMjZIMjdWMjdIMjZ6TTI3LDI2SDI4VjI3SDI3ek0yLDI3SDNWMjhIMnpNNCwyN0g1VjI4SDR6TTUsMjdINlYyOEg1ek02LDI3SDdWMjhINnpNOCwyN0g5VjI4SDh6TTEwLDI3SDExVjI4SDEwek0xMywyN0gxNFYyOEgxM3pNMTUsMjdIMTZWMjhIMTV6TTE5LDI3SDIwVjI4SDE5ek0yMCwyN0gyMVYyOEgyMHpNMjEsMjdIMjJWMjhIMjF6TTIzLDI3SDI0VjI4SDIzek0yNSwyN0gyNlYyOEgyNXpNMjksMjdIMzBWMjhIMjl6TTIsMjhIM1YyOUgyek00LDI4SDVWMjlINHpNNSwyOEg2VjI5SDV6TTYsMjhIN1YyOUg2ek04LDI4SDlWMjlIOHpNMTIsMjhIMTNWMjlIMTJ6TTEzLDI4SDE0VjI5SDEzek0xNiwyOEgxN1YyOUgxNnpNMTcsMjhIMThWMjlIMTd6TTE5LDI4SDIwVjI5SDE5ek0yMiwyOEgyM1YyOUgyMnpNMjMsMjhIMjRWMjlIMjN6TTI1LDI4SDI2VjI5SDI1ek0yNiwyOEgyN1YyOUgyNnpNMjgsMjhIMjlWMjlIMjh6TTI5LDI4SDMwVjI5SDI5ek0zMCwyOEgzMVYyOUgzMHpNMiwyOUgzVjMwSDJ6TTgsMjlIOVYzMEg4ek0xMywyOUgxNFYzMEgxM3pNMTgsMjlIMTlWMzBIMTh6TTE5LDI5SDIwVjMwSDE5ek0yMCwyOUgyMVYzMEgyMHpNMjUsMjlIMjZWMzBIMjV6TTI3LDI5SDI4VjMwSDI3ek0yOCwyOUgyOVYzMEgyOHpNMzAsMjlIMzFWMzBIMzB6TTIsMzBIM1YzMUgyek0zLDMwSDRWMzFIM3pNNCwzMEg1VjMxSDR6TTUsMzBINlYzMUg1ek02LDMwSDdWMzFINnpNNywzMEg4VjMxSDd6TTgsMzBIOVYzMUg4ek0xMCwzMEgxMVYzMUgxMHpNMTEsMzBIMTJWMzFIMTF6TTEyLDMwSDEzVjMxSDEyek0xNCwzMEgxNVYzMUgxNHpNMTUsMzBIMTZWMzFIMTV6TTE2LDMwSDE3VjMxSDE2ek0xNywzMEgxOFYzMUgxN3pNMTksMzBIMjBWMzFIMTl6TTIyLDMwSDIzVjMxSDIyek0yMywzMEgyNFYzMUgyM3pNMjYsMzBIMjdWMzFIMjZ6TTI3LDMwSDI4VjMxSDI3eiIgaWQ9InFyLXBhdGgiIGZpbGw9IiMwMDAwMDAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiLz48L3N2Zz4=" alt="大同國中學校網站 QR code">
+      <div class="ct"><b>想更認識大同？</b><span>掃描 QR code 看學校網站<br>聯絡方式請見帶回家的摺頁</span></div>
+    </div>
   </section>
 
   <div class="foot" id="foot"><span>大同國中・Tayal balay 迎向未來</span><span></span></div>
